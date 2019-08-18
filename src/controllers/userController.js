@@ -41,7 +41,7 @@ module.exports = {
         res.redirect("/users/signIn");
       } else {
         req.flash("notice", "You've successfully signed in!");
-        res.redirect("/");
+        res.redirect("/wikis");
       }
     })
   },
