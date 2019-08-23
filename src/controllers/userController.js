@@ -71,6 +71,7 @@ module.exports = {
     });
   },
 
+
   upgradeForm(req, res, next){
     res.render("users/upgrade", {publishableKey});
   },
