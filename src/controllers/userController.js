@@ -1,3 +1,4 @@
+require("dotenv").config();
 const userQueries = require("../db/queries.users.js");
 const wikiQueries = require("../db/queries.wikis.js");
 const passport = require("passport");
@@ -71,7 +72,7 @@ module.exports = {
   },
 
   upgradeForm(req, res, next){
-    res.render("users/upgrade");
+    res.render("users/upgrade", {publishableKey});
   },
 
   upgrade(req, res, next){
