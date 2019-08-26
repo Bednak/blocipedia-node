@@ -9,9 +9,10 @@ module.exports = {
   add(req, res, next) {
     collaboratorQueries.add(req, (err, collaborator) => {
       if(err){
-        req.flash("error", err);
+        req.flash("notice", "That user is already a collaborator or does not exist!");
+        res.redirect(req.headers.referer);
       }
-      res.redirect(req.headers.referer);
+      else{ res.redirect(req.headers.referer)};
     });
   },
 
